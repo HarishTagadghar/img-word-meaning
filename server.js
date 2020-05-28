@@ -44,7 +44,7 @@ app.post('/upload' , (req,res) => {
             console.log(err);
             return res.send('something went wrong')
         } // accessing image from user
-        let image = fs.readFileSync(__dirname+ '/image/' + req.file.originalname) // access of the image from the user
+        let image = fs.readFileSync(__dirname + '/image/' + req.file.originalname) // access of the image from the user
 
         Tesseract.recognize(
             image, //uploading image to tesseract libery
